@@ -1,15 +1,20 @@
 function BMdirection(subjectname, runnum, runtype)
 
+%%
 %e.g., BMdirection('TEST', 1, 1)
+%subjectname looks for a subject-string identifier
+%runnum looks for a digit, denoting run iteration
+%runtype looks for a digit, here fixed as 1.  This was simply used
+%internally to separate this code from a variation that was earlier
+%piloted.
+%%
  
-%runtypes:  9 IdealCutting/BMLscramble/Modifiedscramble  x   Upright/Inverted
-
 logfname=fullfile(fileparts(mfilename('fullpath')),'Data',sprintf('%s_BMdirection_%d_%d.log',subjectname,runnum,runtype));
 diary(logfname);
 
 %% INITIALIZATION
 
-load walkerdata.mat;
+load walkerdata.mat; %{1}Natural walker; {2}Modified walker; {3} Global walker
 
 nd = 0; %place holder; for scrambled mask, change mmultiply; for linear mask, change in pptwalk
 dotsize=6;%6;
@@ -23,16 +28,6 @@ clc
 
 %% GENERATE TEST TRIALS
 
-% % Create trials
-% if runtype == 1
-%     blocks = Shuffle([2 4 5 7 2 4 5 7 2 4 5 7]);
-% elseif runtype == 2
-%     blocks = Shuffle([5 7 6 8 5 7 6 8 5 7 6 8]);
-% end
-
-% Create trials
-
-%blocks = shuffle([2 4 5 7 6 8]);
 blocks = [2 4 5 7 6 8];
 alltrials = GenerateBlocks(blocks);
 
