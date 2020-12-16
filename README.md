@@ -22,22 +22,22 @@ Portions of this script tap on functions available in Psychtoolbox.  Instruction
 
 
 ## File list
-BMdirection.m                  	\\top-level function to initiate experiment
-CreateDataFile.m               	\\self explanatory...finalizes data structure, stamps date, and saves                                      
-GenerateBlocks.m               	\\defines stimulus type based on block ID, shuffles, outputs trial order.
-CreateTrials.m			\\\called by GenerateBlocks -- defines single trial parameters
-PresentStimulus.m         	\\presents...the stimulus.
-RunOneTrial.m                  	\\runs a single trial    
-RunTrials.m                    	\\runs full trial loop             
-create_windows.m               	\\opens PTB windows                	
-get_key.m                      	\\prompts response pickup                                 
-getdatatypes.m                 	\\called by RunTrials -- checks type of walker/stimulus data fed in.  Fourier series?  Time series data?
-mdComputePositions.m            \\computes the array of dots to draw at current frame.
-mdPhaseScramble.m              	\\called by mdprepare_single -- when called, this script takes time series data and phase-shuffles them.
-mdSpatialScramble.m             \\called by mdprepare_single -- when called, this script takes an intact walker and performs a spatial reordering of walker point-lights
-mdprepare_single.m              \\applies inversion, size, azimuth, 2D projection, centering, and scrambling as necessary               
-shuffle.m                      	\\for trial order randomization
-walkerdata.mat       		\\data structure containing time-series data for each of the three main walker types
+#BMdirection.m                  	\\top-level function to initiate experiment
+#CreateDataFile.m               	\\self explanatory...finalizes data structure, stamps date, and saves                                      
+#GenerateBlocks.m               	\\defines stimulus type based on block ID, shuffles, outputs trial order.
+#CreateTrials.m			\\\called by GenerateBlocks -- defines single trial parameters
+#PresentStimulus.m         	\\presents...the stimulus.
+#RunOneTrial.m                  	\\runs a single trial    
+#RunTrials.m                    	\\runs full trial loop             
+#create_windows.m               	\\opens PTB windows                	
+#get_key.m                      	\\prompts response pickup                                 
+#getdatatypes.m                 	\\called by RunTrials -- checks type of walker/stimulus data fed in.  Fourier series?  Time series data?
+#mdComputePositions.m            \\computes the array of dots to draw at current frame.
+#mdPhaseScramble.m              	\\called by mdprepare_single -- when called, this script takes time series data and phase-shuffles them.
+#mdSpatialScramble.m             \\called by mdprepare_single -- when called, this script takes an intact walker and performs a spatial reordering of walker point-lights
+#mdprepare_single.m              \\applies inversion, size, azimuth, 2D projection, centering, and scrambling as necessary               
+#shuffle.m                      	\\for trial order randomization
+#walkerdata.mat       		\\data structure containing time-series data for each of the three main walker types
 
 
 
